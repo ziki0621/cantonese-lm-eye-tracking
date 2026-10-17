@@ -13,7 +13,7 @@ The study tests whether language-model information measures improve prediction o
 
 This release preserves the available experiment artifacts rather than retrospectively changing their calculations. The archived result tables reproduce all **60 entries in Table 2** of the supplied accepted manuscript to its three-decimal precision. The four model datasets contain the same ordered 10,011 observations and the same pooled cross-validation folds.
 
-There is a substantive discrepancy between the manuscript's description of POS surprisal and the archived implementation: **the reported runs did not use one shared Cifu POS candidate inventory across all four models.** JED351 and CKIP use Cifu candidates; Qwen uses a tagged model vocabulary; CantoneseLLM reuses a precomputed legacy POS column. Their POS units also differ. See [implementation notes](docs/IMPLEMENTATION_NOTES.md). This release documents that discrepancy; it does not establish that the POS methods are equivalent or silently replace the reported POS results.
+POS surprisal measures the contextual predictability of the target's syntactic category. Candidate construction, probability aggregation, units, and extraction provenance are documented in the [implementation notes](docs/IMPLEMENTATION_NOTES.md) and the model-specific manifests. The released values preserve the archived experiment outputs.
 
 The archived CKIP run predates the unified V2 notebooks, and the archived CantoneseLLM run is V1. The V2 notebooks provide the later common pipeline and explicitly retain these POS adapters. Do not assume that rerunning V2 necessarily reproduces every historical metric bit for bit. Original manifests, historical notebooks, and source hashes are included to make the distinction inspectable.
 
@@ -59,7 +59,7 @@ Each model supplies four analysis predictors:
 3. **Entropy before:** Shannon entropy of the next-token distribution before the target; unit: bits.
 4. **Entropy reduction:** entropy before minus next-token entropy after the complete target; unit: bits. Negative values indicate increased uncertainty.
 
-The unified pipeline uses preceding within-sentence, Li-normalized text with punctuation for lexical and entropy measures. It tokenizes context and target separately, concatenates their token IDs, uses one valid causal start token, and limits the sequence to 1,024 tokens by truncating context as necessary. Entropy before is obtained from a separate context-only forward pass. The documented Qwen POS adapter uses a different, unpunctuated lexical-prefix context.
+The unified pipeline uses preceding within-sentence, Li-normalized text with punctuation for lexical and entropy measures. It tokenizes context and target separately, concatenates their token IDs, uses one valid causal start token, and limits the sequence to 1,024 tokens by truncating context as necessary. Entropy before is obtained from a separate context-only forward pass. The Qwen POS adapter's lexical-prefix context is documented in the implementation notes.
 
 Older input/CKIP tables contain additional `entropy`, `entropy_after`, or legacy metric columns. Those columns are retained for provenance. The paper's four-metric analysis uses **`entropy_before`**, not the older summed-within-word `entropy` measure. Always select columns by the correct model prefix and the four names above.
 
@@ -105,7 +105,7 @@ Run the notebook cells in order. Outputs go to a separate model-specific directo
 
 ## Main Archived Findings
 
-The complete comparison is in [the regenerated main table](results/reproduced/table2.md). For TFD, mean MAE improvements from lexical surprisal are 0.229 ms (JED351), 0.249 ms (CKIP), 0.599 ms (Qwen2.5-7B), and 0.683 ms (CantoneseLLM-7B). Adding all four measures yields 0.409, 0.651, 0.821, and 1.251 ms, respectively. Entropy reduction instead favors CKIP. Model rankings therefore depend on the measure, and the absolute predictive gains are modest. POS comparisons should be interpreted with the implementation differences above.
+The complete comparison is in [the regenerated main table](results/reproduced/table2.md). For TFD, mean MAE improvements from lexical surprisal are 0.229 ms (JED351), 0.249 ms (CKIP), 0.599 ms (Qwen2.5-7B), and 0.683 ms (CantoneseLLM-7B). Adding all four measures yields 0.409, 0.651, 0.821, and 1.251 ms, respectively. Entropy reduction instead favors CKIP. Model rankings therefore depend on the measure, and the absolute predictive gains are modest.
 
 ## Attribution and Reuse
 

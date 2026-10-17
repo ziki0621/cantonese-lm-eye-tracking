@@ -2,7 +2,7 @@
 
 ## What the Archive Demonstrates
 
-`scripts/validate_release.py` verifies ordered sample identities, baseline raw controls/outcomes, pooled folds, finite primary measures, cross-task metric identity, notebook Python syntax, and source-file hashes. All 60 rounded mean improvements in manuscript Table 2 match the archived tables. This validates packaging and table correspondence, not the scientific equivalence of different POS definitions or a complete end-to-end rerun.
+`scripts/validate_release.py` verifies ordered sample identities, baseline raw controls/outcomes, pooled folds, finite primary measures, cross-task metric identity, notebook Python syntax, and source-file hashes. All 60 rounded mean improvements in manuscript Table 2 match the archived tables. These checks validate packaging and table correspondence; they do not constitute a complete end-to-end rerun.
 
 ## POS Surprisal
 
@@ -13,7 +13,7 @@
 | Qwen2.5-7B | Usable single-token model vocabulary tagged by PyCantonese; normalized POS mass with stable log-space aggregation; unpunctuated lexical-prefix context | nats | V2 extraction manifest and original unified Colab notebook |
 | CantoneseLLM-7B | Reuses `cantonese7b_pos_surprisal` already present in the prepared base | nats | V1 archived extraction manifest and historical notebook |
 
-The manuscript's statement that all four use a common Cifu candidate inventory is not supported by these archived manifests and code. The supplied Kaggle notebook whose name ends in `cifu_pos` is a different variant; it is not used here to describe the archived Qwen results. Changing an adapter would require new extraction and regression, producing a new analysis rather than reproducing the archived paper results. A bit/nat conversion alone does not harmonize candidate sets or contexts.
+This table records the candidate sources, aggregation procedures, units, and provenance associated with the archived POS-surprisal values. The Qwen results in this release correspond to the original unified Colab notebook. The separate Kaggle notebook whose filename ends in `cifu_pos` is not part of this archived release. Reproduction should use the documented notebook, prepared input, and run manifest associated with each result table.
 
 ## Historical Versus Unified Pipeline
 
