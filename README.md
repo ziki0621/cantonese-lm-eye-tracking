@@ -1,8 +1,8 @@
 # Cantonese Language Models and Eye-Tracking Prediction
 
-Code and data for **Do Cantonese-Adapted Language Models Better Predict Cantonese Reading? A Cross-Model Eye-Tracking Evaluation**, by Ziqi Zhang, Emmanuele Chersoni, and Mohammad Momenian. Accepted at PACLIC 2026.
+Code and data for **Do Cantonese-Adapted Language Models Better Predict Cantonese Reading? A Cross-Model Eye-Tracking Evaluation**, by Ziqi Zhang, Emmanuele Chersoni, and Mohammad Momenian. arXiv preprint, 2026.
 
-[Paper](https://arxiv.org/abs/2609.02163) | [MCFIX](https://github.com/CN-Eyetk/MCFIX) | [Cifu](https://github.com/gwinterstein/Cifu)
+[arXiv](https://arxiv.org/abs/2609.02163) | [MCFIX](https://github.com/CN-Eyetk/MCFIX) | [Cifu](https://github.com/gwinterstein/Cifu)
 
 We compare CKIP GPT-2 Tiny, JED351, Qwen2.5-7B, and CantoneseLLM-7B on predicting Cantonese eye-tracking durations using four information-theoretic measures:
 
@@ -47,12 +47,14 @@ The released results reproduce all 60 rounded entries in manuscript Table 2. The
 ## Citation and Resources
 
 ```bibtex
-@inproceedings{zhang2026cantonese,
+@misc{zhang2026cantonese,
   title = {Do Cantonese-Adapted Language Models Better Predict Cantonese Reading? A Cross-Model Eye-Tracking Evaluation},
   author = {Zhang, Ziqi and Chersoni, Emmanuele and Momenian, Mohammad},
-  booktitle = {Proceedings of PACLIC 2026},
   year = {2026},
-  note = {Accepted; proceedings details pending},
+  eprint = {2609.02163},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+  doi = {10.48550/arXiv.2609.02163},
   url = {https://arxiv.org/abs/2609.02163}
 }
 ```
