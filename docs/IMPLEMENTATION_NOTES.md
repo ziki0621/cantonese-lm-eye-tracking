@@ -6,14 +6,11 @@
 
 ## POS Surprisal
 
-| Model | Archived procedure | Unit | Provenance |
-|---|---|---|---|
-| JED351 | Cifu candidate words with PyCantonese POS labels; candidate token-sequence probabilities and longest-match residual subtraction | bits | V2 extraction manifest and notebook |
-| CKIP GPT-2 Tiny | Cifu procedure with historical minicons-based extraction/alignment | bits | Historical common-complete-case archive; `extraction_manifest.json` is the original `pipeline_manifest.json` |
-| Qwen2.5-7B | Usable single-token model vocabulary tagged by PyCantonese; normalized POS mass with stable log-space aggregation; unpunctuated lexical-prefix context | nats | V2 extraction manifest and original unified Colab notebook |
-| CantoneseLLM-7B | Reuses `cantonese7b_pos_surprisal` already present in the prepared base | nats | V1 archived extraction manifest and historical notebook |
+POS surprisal quantifies the contextual predictability of the target's syntactic category. It is defined as the negative logarithm of the probability assigned to that category given the preceding context:
 
-This table records the candidate sources, aggregation procedures, units, and provenance associated with the archived POS-surprisal values. The Qwen results in this release correspond to the original unified Colab notebook. The separate Kaggle notebook whose filename ends in `cifu_pos` is not part of this archived release. Reproduction should use the documented notebook, prepared input, and run manifest associated with each result table.
+`POS_surprisal = -log P(target_POS | context)`
+
+For Cifu-based extraction, candidate words are drawn from the Cifu lexicon and assigned POS labels using PyCantonese. Candidate probabilities are aggregated by POS to estimate category predictability. The archived notebooks and manifests record the candidate source, aggregation settings, log base, and input provenance used for each released result table; use those records when reproducing a particular run.
 
 ## Historical Versus Unified Pipeline
 
