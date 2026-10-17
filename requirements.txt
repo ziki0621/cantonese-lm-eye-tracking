@@ -1,0 +1,6 @@
+# Lightweight validation and summary figures (no GPU or model downloads).
+numpy>=2.0,<3
+pandas>=2.2,<3
+scipy>=1.16,<2
+matplotlib>=3.9,<4
+openpyxl>=3.1,<4

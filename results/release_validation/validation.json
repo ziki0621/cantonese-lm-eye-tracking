@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "checks": [
+    "63 source-file SHA-256 hashes",
+    "Shared ordered row identities and baseline controls/outcomes",
+    "Shared five-seed pooled fold assignments",
+    "All primary metrics finite and identical across matched NR/TSR positions",
+    "All 60 Table 2 values match archived results at manuscript precision",
+    "All notebook Python cells parse; execution output cleared",
+    "180 regenerated mean/SD pairs match archived summaries"
+  ],
+  "models": {
+    "JED351": {
+      "rows": 10011,
+      "unique_positions": 5007,
+      "task_counts": {
+        "NR": 5007,
+        "TSR": 5004
+      }
+    },
+    "CKIP_GPT2_tiny": {
+      "rows": 10011,
+      "unique_positions": 5007,
+      "task_counts": {
+        "NR": 5007,
+        "TSR": 5004
+      }
+    },
+    "Qwen25_7B": {
+      "rows": 10011,
+      "unique_positions": 5007,
+      "task_counts": {
+        "NR": 5007,
+        "TSR": 5004
+      }
+    },
+    "CantoneseLLM7B": {
+      "rows": 10011,
+      "unique_positions": 5007,
+      "task_counts": {
+        "NR": 5007,
+        "TSR": 5004
+      }
+    }
+  }
+}

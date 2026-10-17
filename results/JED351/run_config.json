@@ -1,0 +1,42 @@
+{
+  "input_file": "MCFIX_NR_TSR_JED351_strict_unified_10011.csv",
+  "input_sha256": "d9dcfbea1ca0a2b47a33856228b114c2b66a12ee8087b37751b3329771f28ee3",
+  "n_rows": 10011,
+  "task_counts": {
+    "NR": 5007,
+    "TSR": 5004
+  },
+  "split_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_splits": 5,
+  "catboost_random_seed": 10,
+  "catboost_iterations": 1000,
+  "task_type": "GPU",
+  "gpu_devices": "0",
+  "cpu_thread_count": 4,
+  "catboost_version": "1.2.10",
+  "pandas_version": "2.2.2",
+  "numpy_version": "2.0.2",
+  "scipy_version": "1.16.3",
+  "sklearn_version": "1.6.1",
+  "python_version": "3.12.13",
+  "delta_mae_definition": "baseline_mae - augmented_model_mae",
+  "ablation_definition": "removed_model_mae - full_all_four_mae",
+  "metric_units": {
+    "lexical_surprisal": "bits",
+    "pos_surprisal": "bits",
+    "entropy_before": "bits",
+    "entropy_reduction": "bits"
+  },
+  "pipeline_version": "MCFIX_STRICT_UNIFIED_10011_V2",
+  "model_key": "jed351",
+  "row_identity_sha256": "747e55e2497b72b1d1b50830089156bdfd7b1e96cb1e7e59a63a26c60ebd22f1",
+  "completed_jobs": 315,
+  "expected_jobs": 315,
+  "latest_session_seconds": 17525.948582801
+}

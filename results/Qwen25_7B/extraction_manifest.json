@@ -1,0 +1,38 @@
+{
+  "pipeline_version": "MCFIX_STRICT_UNIFIED_10011_V2",
+  "model_key": "qwen25_7b",
+  "model_id": "Qwen/Qwen2.5-7B",
+  "model_revision": "d149729398750b98c0af14eb82c78cfe92750796",
+  "tokenizer_id": "Qwen/Qwen2.5-7B",
+  "tokenizer_revision": null,
+  "source_sha256": "42d7a5251f53e367e105e324e6238374bafbac4dd9287090c5f4df49c2fc0610",
+  "base_sha256": "a438bb76810931f5c297535cbaf4df9e0e9198520275fb430bcc111472ba908a",
+  "cifu_sha256": null,
+  "target": "pure_token tokenized separately",
+  "context": "Li-normalized preceding IA_LABEL text with punctuation",
+  "max_sequence_tokens": 1024,
+  "pos_mode": "model_vocab_pycantonese",
+  "signature": "421aea1338cb3a12",
+  "common_rows": 10011,
+  "task_counts": {
+    "NR": 5007,
+    "TSR": 5004
+  },
+  "metric_columns": {
+    "lexical_surprisal": "qwen25_7b_lexical_surprisal",
+    "pos_surprisal": "qwen25_7b_pos_surprisal",
+    "entropy_before": "qwen25_7b_entropy_before",
+    "entropy_reduction": "qwen25_7b_entropy_reduction"
+  },
+  "metric_units": {
+    "lexical_surprisal": "bits",
+    "pos_surprisal": "nats",
+    "entropy_before": "bits",
+    "entropy_reduction": "bits"
+  },
+  "previous_controls": "computed on the complete 5,072-row source before exclusions",
+  "token_boundary": "context and pure_token tokenized separately; IDs concatenated",
+  "entropy_before": "independent context-only forward pass",
+  "boundary_changed_source_rows": 246,
+  "final_csv": "/content/drive/MyDrive/MCFIX_STRICT_UNIFIED_10011_V2_Qwen25_7B/modeling_data/MCFIX_NR_TSR_Qwen25_7B_strict_unified_10011.csv"
+}

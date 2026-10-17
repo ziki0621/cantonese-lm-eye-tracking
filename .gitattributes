@@ -1,0 +1,2 @@
+# Preserve original bytes so archived input hashes remain valid on every OS.
+* -text

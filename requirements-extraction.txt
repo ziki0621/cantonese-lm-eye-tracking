@@ -1,0 +1,10 @@
+# Original notebook installation pins; install a suitable PyTorch CUDA build separately.
+-r requirements.txt
+transformers==5.13.1
+accelerate>=0.34
+catboost==1.2.10
+pycantonese==5.0.0
+scikit-learn>=1.6,<2
+tqdm
+ipython
+minicons==0.3.38

@@ -1,0 +1,69 @@
+{
+  "model_id": "ckiplab/gpt2-tiny-chinese",
+  "model_prefix": "ckip_gpt2_tiny_",
+  "resolved_model_commit": "047d217fe93e14256a633185d807d0cf5ddcc3b8",
+  "tokenizer_id": "bert-base-chinese",
+  "tokenizer_class": "BertTokenizer",
+  "checkpoint_version": "ckip-gpt2-tiny-jed351-matched-v1",
+  "unk_offset_content_policy": "entropy-content-unk-lexical-missing-v3",
+  "source_input_sha256": "42d7a5251f53e367e105e324e6238374bafbac4dd9287090c5f4df49c2fc0610",
+  "cifu_file_sha256": "4a12c391f3590760562c1ba3298b2a91d6bd7827fc34ea2e4922a15523412366",
+  "input_filename": "trad_NR_first_column_aligned_original_content.xlsx",
+  "cifu_pos_filename": "Cifu-v1_with_pycantonese_pos.csv",
+  "sheet_name": "Original_Data",
+  "rows": 5072,
+  "metric_rows_included": 5050,
+  "alignment_status_counts": {
+    "exact": 5039,
+    "missing_pure_token": 22,
+    "exact_with_lexical_prefix": 11
+  },
+  "log_base": 2,
+  "unit": "bits",
+  "text_normalization": "Li et al. (2023) released text_normalizer",
+  "punctuation_policy": "Li-normalized punctuation is retained in context; lexical metrics exclude attached punctuation; trailing punctuation enters only the context of subsequent words.",
+  "special_token_policy": "minicons IncrementalLMScorer formatting; terminal SEP/EOS excluded when defining next-token states.",
+  "minicons_manual_bos": false,
+  "minicons_version": "0.3.38",
+  "transformers_version": "5.13.1",
+  "torch_version": "2.11.0+cu128",
+  "max_context_tokens": 1024,
+  "run_limit_rows": null,
+  "metric_columns": [
+    "ckip_gpt2_tiny_lexical_surprisal",
+    "ckip_gpt2_tiny_pos_surprisal",
+    "ckip_gpt2_tiny_entropy",
+    "ckip_gpt2_tiny_entropy_before",
+    "ckip_gpt2_tiny_entropy_after",
+    "ckip_gpt2_tiny_entropy_reduction"
+  ],
+  "regression": {
+    "reference_sample": "CKIP-JED351 common complete-case 10,061-row sample",
+    "sample_rows": 10011,
+    "task_counts": {
+      "NR": 5007,
+      "TSR": 5004
+    },
+    "model": "CKIP_GPT2_tiny",
+    "design": "pooled NR+TSR with TASK predictor",
+    "task_specific_training": false,
+    "evaluation_scopes": [
+      "POOLED",
+      "NR_within_pooled",
+      "TSR_within_pooled"
+    ],
+    "estimator": "CatBoostRegressor",
+    "iterations": 1000,
+    "catboost_random_seed": 10,
+    "split_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "n_splits": 5,
+    "expected_jobs": 315,
+    "expected_fits": 1575
+  }
+}

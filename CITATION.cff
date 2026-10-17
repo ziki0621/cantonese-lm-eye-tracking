@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying PACLIC 2026 paper and the upstream MCFIX and Cifu resources."
+title: "Do Cantonese-Adapted Language Models Better Predict Cantonese Reading? A Cross-Model Eye-Tracking Evaluation"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Ziqi
+  - family-names: Chersoni
+    given-names: Emmanuele
+  - family-names: Momenian
+    given-names: Mohammad
+url: "https://arxiv.org/abs/2609.02163"
+preferred-citation:
+  type: conference-paper
+  title: "Do Cantonese-Adapted Language Models Better Predict Cantonese Reading? A Cross-Model Eye-Tracking Evaluation"
+  authors:
+    - family-names: Zhang
+      given-names: Ziqi
+    - family-names: Chersoni
+      given-names: Emmanuele
+    - family-names: Momenian
+      given-names: Mohammad
+  year: 2026
+  url: "https://arxiv.org/abs/2609.02163"
+  notes: "Accepted at PACLIC 2026; final proceedings metadata pending."

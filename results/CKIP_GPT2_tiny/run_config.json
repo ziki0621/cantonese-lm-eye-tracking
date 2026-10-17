@@ -1,0 +1,34 @@
+{
+  "input_file": "MCFIX_NR_TSR_CKIP_JED351_common_complete_case_10011.csv",
+  "input_sha256": "2b0bc8c2665fbbc0fe042c06ebe6debeb1426cfc4e9b19ea940ad9170ba3160b",
+  "n_rows": 10011,
+  "task_counts": {
+    "NR": 5007,
+    "TSR": 5004
+  },
+  "split_seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "n_splits": 5,
+  "catboost_random_seed": 10,
+  "catboost_iterations": 1000,
+  "task_type": "GPU",
+  "gpu_devices": "0",
+  "cpu_thread_count": 4,
+  "catboost_version": "1.2.10",
+  "pandas_version": "2.2.2",
+  "numpy_version": "2.0.2",
+  "scipy_version": "1.16.3",
+  "sklearn_version": "1.6.1",
+  "python_version": "3.12.13",
+  "delta_mae_definition": "baseline_mae - augmented_model_mae",
+  "ablation_definition": "removed_model_mae - full_all_four_mae",
+  "metric_units": "milliseconds for outcomes; bits for CKIP_GPT2_tiny metrics",
+  "completed_jobs": 315,
+  "expected_jobs": 315,
+  "latest_session_seconds": 17839.597981072
+}
